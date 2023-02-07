@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/icons/cap.png" type="image/x-icon">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
+    <!--Hoja de Estilos CSS-->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Rookiecap-Productos</title>
+</head>
+<body>
+
+    <!--Navbar con flexbox-->
+    <nav>
+        <a href="#">
+            <img src="../assets/icons/cap.png" alt="logo-rookiecap" width="100px">
+        </a>
+
+                    <a href="../index.html">Home</a>   
+            
+                    <a  href="../pages/nosotros.html">Nosotros</a>    
+             
+                    <a href="../pages/novedades.html" >Novedades</a>
+                
+                    <a href="#">Productos</a>
+             
+                    <a href="../pages/contacto.html">Contacto</a>              
+    </nav>
+
+    <!--Metodología BEM-->
+    <section class="contenedor">
+        <!--Bloque 1-->
+        <article class="tarjeta">
+            <a class="tarjeta__miniatura" href="#">
+                <img class="tarjeta__imagen" src="../assets/imagenes/gorraTrucker.jpg" alt="gorra-trucker">
+            </a>
+
+            <article class="tarjeta__textos">
+                <h3 class="tarjeta__titulo">
+                    <a class="tarjeta__enlace" href="#">Gorra Trucker</a> 
+                </h3>
+                <p class="tarjeta__parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            
+              <!--Bloque 2-->
+              <button class="boton">Saber Más</button>
+            </article>
+        </article>
+    </section>
+
+ 
+        <!--Box Modeling-->
+        <!--Elemento de Bloque-->
+        <h1 class="encabezado">Box Model</h1>
+        <h3 class="encabezado-nivel3">Otro encabezado</h3>
+
+        <!--Elementos de Línea-->
+        <a class="linea1" href="../pages/nosotros.html">Nosotros</a>
+        
+ <!--cards Bootstrap-->
+ <div class="card" style="width: 18rem;">
+    <img src="../assets/imagenes/gorraTrucker.jpg" class="card-img-top" alt="gorra-tracker">
+    <div class="card-body">
+      <h5 class="card-title">Gorra Trucker</h5>
+      <p class="card-text">La gorra más usada en el verano</p>
+      <a href="#" class="btn btn-primary">Comprar</a>
+    </div>
+  </div>
+ 
+    <script src="../libs/bootstrap/js/bootstrap.bundle.min.js"></script>   
+</body>
+</html>

@@ -1,0 +1,419 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h2{
+    font-size: 25px;
+    text-align: center;
+    margin: 15px;
+}
+
+/*Fexbox*/
+
+.flex-container{
+	border: 1px solid black;
+	background: #ccc;
+	padding: 10px;
+	margin: 10px;
+	height: 650px;
+
+	/*propiedades de la caja*/
+	/*activamos flexbox*/
+	display: flex;
+	/*Define cual es el eje principal, si fila o columna*/
+	flex-direction: row;
+	/*defino el desborde*/
+	flex-wrap: wrap;
+	/*alineamos en el eje principal*/
+	justify-content: flex-start;
+	/*alineamos en el eje secundario*/
+	align-items: flex-start;
+	/*Espacio entre líneas*/
+	/*align-content: space-around;*/
+
+}
+
+.caja{
+	/*box-modeling*/
+	width: 120px;
+	height: 120px;
+	border: 1px solid gray;
+	background-color: white;
+	margin: 5px;
+
+	/*tipografías*/
+	color: black;
+	font-weight: bold;
+	text-align: center;
+
+}
+
+.c1{
+	background-color: lightblue;
+	/*Defino el órden de aparición*/
+	order: 3;
+}
+
+.c2{
+	background-color: lightcoral;
+	order: 1;
+}
+
+.c3{
+	background-color: lightgreen;
+	order: 2;
+	/*defino el derecho a crecer*/
+	flex-grow: 5;
+}
+
+/*Box Modeling AfterClass*/
+.encabezado{
+	width: 250px;
+	background-color: aqua;
+	border: 5px solid black;
+	margin: 20px 15px 25px 30px;
+	padding: 20px 20px 20px 20px;
+}
+
+.linea1{
+	width: 250px;
+	height: 300px;
+	border: 1px solid black;
+	
+	display: inline-block;
+
+}
+
+/*CSS GRID Práctica*/
+.title-grid{
+	color: black;
+	font-family: 'Unbounded', cursive;
+	font-size: 35px;
+	text-transform: uppercase;
+	text-align: center;
+
+	margin: 20px;
+}
+
+.grid-container{
+	width: 90%;
+	max-width: 1000px;
+	border: 10px solid black;
+	margin: auto;
+	height: 500px;
+
+	font-size: 50px;
+	font-family: 'Unbounded', cursive;
+	line-height: 50px;
+	text-align: center;
+
+	/*Activamos grid*/
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: repeat(4,1fr);
+	column-gap: 10px;
+	row-gap: 10px;
+	/*justify-items: end;/*Eje Horizontal*/
+	/*align-items: end;*/ /*Eje vertical*/
+
+}
+
+/*Divs que están diréctamente dentro del grid-container*/
+.grid-container > div {
+	padding: 20px;
+	color: #fff;
+	background: #2f89fc;
+}
+
+/*Grid Áreas*/
+#grilla{
+	display: grid;
+	grid-template-areas: 
+	"nav 	header 		header"
+	"nav 	productos 	publicidad"
+	"nav 	servicios 	publicidad"
+	"nav 	footer 		footer"
+	;
+	grid-template-rows: 100px 1fr 1fr 75px;
+	grid-template-columns: 20% auto 15%;
+}
+
+.border{
+	border: 1px solid black;
+}
+
+#grilla header {
+	grid-area: header;
+	background-color: lightblue;
+}
+
+#grilla footer{
+	grid-area: footer;
+	background-color: lightcoral;
+}
+
+#productos{
+	grid-area: productos;
+	background-color: lightgreen;
+}
+
+#servicios{
+	grid-area: servicios;
+	background-color: brown;
+}
+
+/*nav {
+	grid-area: nav;
+	background-color: blueviolet;
+}*/
+
+aside {
+	grid-area: publicidad;
+	background-color: darkmagenta;
+}
+
+.encabezadoHome{
+	text-align: center;
+	font-size: 25px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	text-decoration: underline;
+	font-weight: bold;
+	color: red;
+}
+
+body{
+	background-color: #ccc;
+}
+
+.gorra-trucker{
+	width: 50%;
+}
+
+.parrafo-contacto{
+	font-size: 25px;
+	font-weight:500;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: black;
+	
+	margin-left: 40px;
+}
+
+/*Navbar con Flexbox*/
+nav {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+a {
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/*Pseudoclases*/
+a:hover {
+	background: #f10086;
+	border-radius: 5px;
+	padding: 5px;
+	color: white;
+	cursor: pointer;
+}
+
+a:active {
+	background: blueviolet;
+	color: black;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+a:link{
+	color: green;
+}
+
+a:visited {
+	color: red;
+}
+
+/*First and last child*/
+.grupo {
+	width: 500px;
+	margin: 20px auto;
+	background-color: gray;
+	padding: 10px;
+	font-size: 20px;
+}
+
+.parrafos p:first-child{
+	background: red;
+	color: white;
+}
+
+.parrafos p:last-child{
+	background-color: black;
+	color: white;
+}
+
+/*First and last type*/
+.elementos p:first-of-type{
+	background: #f10086;
+	color: white;
+}
+
+.elementos p:last-of-type{
+	background: blueviolet;
+	color: white;
+}
+
+.elementos div:first-of-type{
+	background: #2f89fc;
+	color: black;
+}
+
+.elementos div:last-of-type{
+	background: #ccc;
+	color: red;
+}
+
+/*nth-first-child y nth-last-child*/
+.lista :nth-child(4){
+	background: red;
+	color: white;
+}
+
+/*Metodología BEM*/
+.contenedor {
+	max-width: 500px;
+	width: 100%;
+	margin-left: 15px;
+	margin-top: 20px;
+}
+
+.tarjeta {
+	width: 400px;
+	border: 5px solid black;
+	text-align: center;
+}
+
+.tarjeta__miniatura{
+	height: 200px;
+}
+
+.tarjeta__imagen{
+	width: 70%;
+	padding-top: 20px;
+}
+
+.tarjeta__textos{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	margin-bottom: 20px;
+	color: black;
+}
+
+.tarjeta__enlace{
+	color: #f10086;
+	padding: 10px auto;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.tarjeta__parrafo{
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	max-width: 100%;
+	line-height: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+/*Bloque 2*/
+
+.boton{
+	font-size: 14px;
+	padding: 8px 35px;
+	background-color: #000;
+	border: 25px;
+	text-decoration: none;
+	color: white;
+}
+
+/*Modificador*/
+.boton--alternativo{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.img-slider{
+	width: 50%;
+}
+
+
+/*Mediaqueries*/
+@media screen and (max-width: 576px){
+	#grilla{
+		grid-template-rows: 100px 1fr 1fr 1fr 60px 60px;
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		"header"
+		"nav"
+		"productos"
+		"servicios"
+		"publicidad"
+		"footer"
+		;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width:992px) {
+
+	/*Grid Responsive*/
+	#grilla{
+		grid-template-rows: 100px 1fr 1fr 1fr 60px;
+		grid-template-columns: repeat(4,1fr);
+		grid-template-areas: 
+		"header 	header 		header 		header"
+		"nav 		nav 		nav 		nav"
+		"productos 	productos 	productos 	publicidad"
+		"servicios 	servicios 	servicios 	publicidad"
+		"footer 	footer 		footer 		footer"
+		;
+	}
+
+	.gorra-trucker{
+		display: none;
+	}
+	
+	.encabezadoHome{
+		text-align: left;
+		text-decoration: none;
+		color: blue;
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		font-weight: lighter;
+		font-size: 40px;
+	}
+
+	.parrafo-contacto{
+		font-size: 40px;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-weight: bold;
+		margin: 50px;
+		color: red;
+	}
+}
+
+@media screen and (min-width:992px) and (max-width: 1200px){
+	
+	.encabezadoHome{
+		font-size: 60px;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		color: coral;
+		text-decoration: overline;
+	}
+}
